@@ -33,7 +33,14 @@ function CountriesList() {
               {countries.map((country) => {
                 return (
                   <div>
-                    <p> -- If we find a flag -- </p>
+                    <img
+                      src={
+                        "http://www.geognos.com/api/en/countries/flag/" +
+                        country.alpha2Code +
+                        ".png"
+                      }
+                      alt="flag"
+                    ></img>
                     <Link to={country.alpha3Code}>
                       <p> {country.name.official} </p>
                     </Link>

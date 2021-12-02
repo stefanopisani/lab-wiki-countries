@@ -8,7 +8,7 @@ function Navbar() {
       <div className="container">
         LAB | React WikiCountries
         <ul>
-          <Link to="/countries" className="nav-link">
+          <Link to="/" className="nav-link">
             Countries List
           </Link>
         </ul>

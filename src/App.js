@@ -13,8 +13,9 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <CountriesList />
+          {/* <CountriesList /> */}
           <Routes>
+            <Route path="/" element={<CountriesList />} />
             <Route path="/:countryId" element={<CountryDetails />} />
           </Routes>
         </div>
