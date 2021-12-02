@@ -134,20 +134,6 @@ This component should render a list of `Link`s that are used to trigger the brow
 
 Now that our list of countries is ready, we should create the `CountryDetails` component. `CountryDetails` displays the country details as per the link that we clicked. This component should be dynamically displayed/rendered with the `<Route />` using the `render` prop:
 
-```jsx
-// Example
-<Route render={(props) => <SomeComponent {...props} otherProp={someData} > } />
-```
-
-You should create only 1 `<Route />` for the `CountryDetails` component.
-
-
-
-Components rendered by the `Route` receive special `props` (`match`, `location` and `history`) passed by the `react-router-dom`. We can use this props to obtain the information coming from the browser's URL bar, for example, the `alpha3Code` code of the country. For a reminder on how to set up and access the URL parameters with React Router check [this example](https://reactrouter.com/web/api/Route/route-props).
-
-
-
-<!--
 
 Now that our list of countries is ready, we should create the `CountryDetails` component. `CountryDetails` displays the country details as per the link that we clicked. This component should be receive the array of countries as a prop. Here's a reminder on how to do this:
 
@@ -161,8 +147,6 @@ You should create only 1 `<Route />` for the `CountryDetails` component.
 
 
 Components rendered by the `Route` receive special `props` (`match`, `location` and `history`) passed by the `react-router-dom` and can access it via the React Router hooks `useParams` and `useHistory`. We can use them to obtain the information coming from the browser's URL bar, for example, the `alpha3Code` code of the country. For a reminder on how to set up and access the URL parameters with React Router check [this example](https://reactrouter.com/docs/en/v6/api#useparams).
-
--->
 
 
 
