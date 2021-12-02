@@ -12,10 +12,10 @@ function App() {
       <Navbar />
       <div class="container">
         <div class="row">
-          <div class="col-sm">
+        <div class="col-3" style={{ maxHeight: '90vh', overflow: 'scroll' }}>
             <CountriesList />
           </div>
-          <div class="col-sm">
+          <div class="col">
             <Routes>
               <Route path="/:countryId" element={<CountriesDetails />} />
             </Routes>
