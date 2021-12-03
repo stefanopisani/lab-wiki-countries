@@ -13,9 +13,16 @@ function App() {
 
       <div className="container">
         <div className="row">
-          {/* <CountriesList /> */}
+          <CountriesList />
           <Routes>
-            <Route path="/" element={<CountriesList />} />
+            <Route
+              path="/"
+              element={
+                <div className="col-7">
+                  <h2>Select a Country</h2>
+                </div>
+              }
+            />
             <Route path="/:countryId" element={<CountryDetails />} />
           </Routes>
         </div>

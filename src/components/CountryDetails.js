@@ -6,6 +6,12 @@ import { useParams, Link } from "react-router-dom";
 
 // const apiURL = "https://ih-countries-api.herokuapp.com/countries";
 
+function getCountryName(code) {
+    const theCountry = countriesData.find((oneCountry) => {
+        return oneCountry.alpha3Code === code;
+    })
+}
+
 function CountryDetails() {
   const [foundCountry, setFoundCountry] = useState({});
 
@@ -21,7 +27,7 @@ function CountryDetails() {
     });
     console.log("foundCountryDetails", foundCountryDetails);
     setFoundCountry(foundCountryDetails);
-  }, []);
+  }, [countryId]);
 
   //   useEffect(() => {
   //     const fetchCountry = async () => {
@@ -70,8 +76,13 @@ function CountryDetails() {
             </tr>
             <tr>
               <td>Borders</td>
-              <td> This is the part that is not working to call name/ .map is breaking
-               
+              <td> This is the part that is making the code break
+              <ul>
+                { foundCountry.borders.map((countryCode) => {
+                    return <li> <Link to={"/" + countryCode}> { countryCode } </Link> </li>
+                })}
+                   {/* getCountryName(countryCode) should give the name */}
+              </ul>
               {/* <ul>
                 {foundCountry &&
                   foundCountry.borders.map((countryCode) => (
