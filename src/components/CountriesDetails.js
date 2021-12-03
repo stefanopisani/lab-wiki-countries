@@ -41,10 +41,10 @@ function CountriesDetails() {
 
   // FUNCTIONS
   const showCountryName = (countryCode) => {
-    const neighborCountry = countriesJson.find(
+    const theCountry = countriesJson.find(
       (oneCountry) => oneCountry.alpha3Code === countryCode
     );
-    return neighborCountry.name.common;
+    return theCountry.name.common;
   };
 
   return (

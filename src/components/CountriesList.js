@@ -15,7 +15,7 @@ function CountriesList() {
     //Use Data from API
     const fetchData = async () => {
       const response = await axios.get(apiURL);
-      const countriesData = response.data;
+      const countriesData = response.data.reverse();
 
       setCountries(countriesData);
     };
