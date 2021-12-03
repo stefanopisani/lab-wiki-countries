@@ -70,21 +70,22 @@ function CountryDetails() {
             </tr>
             <tr>
               <td>Borders</td>
-              <td>
-              <ul>
+              <td> This is the part that is not working to call name/ .map is breaking
+               
+              {/* <ul>
                 {foundCountry &&
                   foundCountry.borders.map((countryCode) => (
                     <li>
                       <Link to={'/' + countryCode}>
                         {
                           countriesData.find(
-                            (c) => c.alpha3Code === countryCode
+                            (code) => code.alpha3Code === countryCode
                           ).name.common
                         }
                       </Link>
                     </li>
                   ))}
-              </ul>
+              </ul> */}
             </td>
             </tr>
           </tbody>
