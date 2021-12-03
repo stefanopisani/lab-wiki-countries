@@ -1,8 +1,8 @@
 import countriesData from "./../countries.json";
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 // const apiURL = "https://ih-countries-api.herokuapp.com/countries";
 
@@ -71,8 +71,21 @@ function CountryDetails() {
             <tr>
               <td>Borders</td>
               <td>
-                <>Something here//this is giving an error for now</>
-              </td>
+              <ul>
+                {foundCountry &&
+                  foundCountry.borders.map((countryCode) => (
+                    <li>
+                      <Link to={'/' + countryCode}>
+                        {
+                          countriesData.find(
+                            (c) => c.alpha3Code === countryCode
+                          ).name.common
+                        }
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </td>
             </tr>
           </tbody>
         </table>
